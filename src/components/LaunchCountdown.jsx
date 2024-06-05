@@ -163,7 +163,7 @@ const CountdownTimer = () => {
                     ></div>
                 ))}
             </div>
-            <div className="p-6 md:p-12 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg text-center relative z-10 mx-4 w-full max-w-md md:max-w-4xl">
+            <div className="p-12 sm:p-12 bg-gray-800 bg-opacity-70 sm:bg-opacity-90 rounded-lg shadow-lg text-center mx-auto max-w-4xl">
                 <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4">Setting New Benchmarks in Digital Transformation</h1>
                 <p className="text-sm md:text-md text-gray-400 mb-6">Get ready to experience the future of digital solutions. Blue Design is coming soon, bringing you exceptional app and web development, captivating design, and social media strategies that connect.</p>
                 <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-center md:space-x-8 mb-8">
@@ -191,7 +191,7 @@ const CountdownTimer = () => {
                     Drop a Review
                 </button>
 
-                <div className="absolute bottom-4 right-4 flex space-x-4 text-xl md:text-2xl">
+                <div className="sm:mt-1 mt-5 flex space-x-4 text-xl md:text-2xl sm:justify-end justify-center">
                     <a href="https://www.linkedin.com/company/mybluedesignco" className="text-gray-400 hover:text-white transition-colors duration-300">
                         <FaLinkedin style={{ fontSize: '32px' }} />
                     </a>
@@ -205,35 +205,34 @@ const CountdownTimer = () => {
             </div>
             <SubscriptionModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
-    );
+   );
 };
 
 const TimeUnit = ({ value, label }) => (
-    <div className="flex flex-col items-center w-full md:w-auto">
-        <div className="relative w-32 h-32 md:w-32 md:h-32 flex items-center justify-center mb-2">
-            <svg className="absolute w-full h-full">
-                <circle className="text-gray-700" strokeWidth="6" stroke="currentColor" fill="transparent" r="52" cx="50%" cy="50%" />
-                <circle
-                    className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    stroke="currentColor"
-                    fill="transparent"
-                    r="52"
-                    cx="50%"
-                    cy="50%"
-                    style={{
-                        strokeDasharray: '326.56',
-                        strokeDashoffset: (326.56 * (1 - (value / (label === 'Days' ? 365 : 60)))).toFixed(1),
-                        transition: 'stroke-dashoffset 1s linear',
-                    }}
-                />
-            </svg>
-            <span className="text-2xl md:text-4xl text-white font-semibold z-10">{value}</span>
-        </div>
-        <span className="text-sm md:text-lg text-gray-400 font-medium">{label}</span>
-    </div>
+   <div className="flex flex-col items-center w-full md:w-auto">
+       <div className="relative w-32 h-32 md:w-32 md:h-32 flex items-center justify-center mb-2">
+           <svg className="absolute w-full h-full">
+               <circle className="text-gray-700" strokeWidth="6" stroke="currentColor" fill="transparent" r="52" cx="50%" cy="50%" />
+               <circle
+                   className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+                   strokeWidth="6"
+                   strokeLinecap="round"
+                   stroke="currentColor"
+                   fill="transparent"
+                   r="52"
+                   cx="50%"
+                   cy="50%"
+                   style={{
+                       strokeDasharray: '326.56',
+                       strokeDashoffset: (326.56 * (1 - (value / (label === 'Days' ? 365 : 60)))).toFixed(1),
+                       transition: 'stroke-dashoffset 1s linear',
+                   }}
+               />
+           </svg>
+           <span className="text-2xl md:text-4xl text-white font-semibold z-10">{value}</span>
+       </div>
+       <span className="text-sm md:text-lg text-gray-400 font-medium">{label}</span>
+   </div>
 );
 
 export default CountdownTimer;
-
