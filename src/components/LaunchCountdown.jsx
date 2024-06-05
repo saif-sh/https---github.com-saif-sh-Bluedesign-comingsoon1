@@ -198,7 +198,7 @@ const CountdownTimer = () => {
                     <a href="https://www.instagram.com/mybluedesignco/" className="text-gray-400 hover:text-white transition-colors duration-300">
                         <FaInstagram style={{ fontSize: '32px' }} />
                     </a>
-                    <a href="#https://www.facebook.com/mybluedesignco" className="text-gray-400 hover:text-white transition-colors duration-300">
+                    <a href="https://www.facebook.com/mybluedesignco" className="text-gray-400 hover:text-white transition-colors duration-300">
                         <FaFacebook style={{ fontSize: '32px' }} />
                     </a>
                 </div>
