@@ -110,7 +110,7 @@ const CountdownTimer = () => {
     };
 
     const calculateTimeLeft = () => {
-        const targetDate = new Date('aug 1, 2024 00:00:00').getTime();
+        const targetDate = new Date('sep 1, 2024 00:00:00').getTime();
         const now = new Date().getTime();
         const distance = targetDate - now;
 
